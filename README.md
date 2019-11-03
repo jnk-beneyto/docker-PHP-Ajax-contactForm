@@ -13,3 +13,5 @@ A contact form that sends email through phpmailer and shows messages
 3. Run docker.
 4. execute on path project by command line:
   - **docker-compose up**
+5. on browser :
+  - **localhost:8080**
