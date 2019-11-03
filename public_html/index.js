@@ -1,6 +1,16 @@
 $(function () {
     $('#submit').on('click', function (e) {
 
+        // if there's a success class remove it
+        if ($('#response').hasClass("alert alert-success")) {
+            $('#response').removeClass("alert alert-success").html('');
+        }
+
+        // if there's a danger class remove it
+        if ($('#response').hasClass("alert alert-danger")) {
+            $('#response').removeClass("alert alert-danger").html('');
+        }
+
         //avoiding refresh
         e.preventDefault();
 
@@ -15,10 +25,7 @@ $(function () {
         //checks if any input is empty
         if (name == "" || email == "" || msg == "") {
 
-            // if there's a success class remove it
-            if ($('#response').hasClass("alert alert-success")) {
-                $('#response').removeClass("alert alert-success");
-            }
+
             $('#response').addClass("alert alert-danger").html('Please fill up all fields').show();
         } else {
 
